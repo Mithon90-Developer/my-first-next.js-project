@@ -1,0 +1,112 @@
+.section {
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+
+.tagline {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.heading {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.content {
+  padding: 25px;
+}
+
+.date {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #777;
+}
+
+.title {
+  margin: 0 0 15px;
+  font-size: 24px;
+  line-height: 1.3;
+  color: black;
+  font-weight: 600;
+}
+
+.excerpt {
+  margin: 0 0 20px;
+  color: #666;
+  line-height: 1.7;
+}
+
+.link {
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .section {
+    padding: 70px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 34px;
+  }
+}

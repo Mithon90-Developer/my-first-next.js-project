@@ -1,0 +1,154 @@
+.section {
+  padding: 100px 0;
+  background: #111;
+  color: #fff;
+}
+
+.container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  max-width: 700px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.line {
+  width: 35px;
+  height: 1px;
+  background: #fff;
+}
+
+.heading {
+  margin: 0 0 20px;
+
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.description {
+  max-width: 600px;
+  margin: 0 auto;
+
+  font-size: 16px;
+  line-height: 1.8;
+  color: #999;
+}
+
+/* Counters */
+
+.counters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.counter {
+  position: relative;
+  padding: 45px 25px;
+  text-align: center;
+}
+
+.counter:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 1px;
+  height: calc(100% - 60px);
+  background: #333;
+}
+
+.value {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.label {
+  display: block;
+
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .counters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counter:nth-child(2)::after {
+    display: none;
+  }
+
+  .counter:nth-child(-n + 2) {
+    border-bottom: 1px solid #333;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .header {
+    margin-bottom: 50px;
+  }
+
+  .counters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .counter {
+    padding: 35px 15px;
+  }
+
+  .counter:not(:last-child)::after {
+    top: 25px;
+    height: calc(100% - 50px);
+  }
+
+  .value {
+    font-size: 38px;
+  }
+
+  .label {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
