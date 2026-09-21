@@ -1,0 +1,173 @@
+.footer {
+  background: #111111;
+  color: #ffffff;
+  margin-top: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 24px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+/* About */
+
+.about {
+  max-width: 320px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  object-fit: contain;
+}
+
+.description {
+  margin-top: 20px;
+
+  color: #aaaaaa;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* Columns */
+
+.column h3 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+/* Links */
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links a {
+  color: #aaaaaa;
+  font-size: 15px;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #ffffff;
+}
+
+
+/* Contact */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact a,
+.contact p {
+  margin: 0;
+
+  color: #aaaaaa;
+  font-size: 15px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: #ffffff;
+}
+
+
+/* Social */
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social a {
+  color: #aaaaaa;
+  font-size: 15px;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.social a:hover {
+  color: #ffffff;
+}
+
+
+/* Bottom */
+
+.bottom {
+  border-top: 1px solid #292929;
+}
+
+.bottomContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+.bottomContainer p {
+  margin: 0;
+
+  color: #777777;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 768px) {
+
+  .footer {
+    margin-top: 50px;
+  }
+
+  .container {
+    padding: 50px 20px;
+
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about {
+    max-width: 100%;
+  }
+
+  .column h3 {
+    margin-bottom: 15px;
+  }
+
+  .bottomContainer {
+    padding: 18px 20px;
+  }
+
+  .bottomContainer p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}

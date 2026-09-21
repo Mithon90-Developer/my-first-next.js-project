@@ -1,0 +1,226 @@
+.header {
+  width: 100%;
+  background: #000000;
+  border-bottom: 1px solid #eeeeee67;
+}
+
+.container {
+  max-width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  object-fit: contain;
+}
+
+/* Desktop Navigation */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav a {
+  color: #faf7f7;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #FF5500;
+}
+
+/* Desktop Button */
+
+.button {
+  padding: 12px 20px;
+  background: #FF5500;
+  color: #ffffff;
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: #ff8c00;
+}
+
+/* Mobile Hamburger */
+
+.menuButton {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 8px;
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.menuButton span {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  background: #faf7f7;
+  border-radius: 2px;
+
+  transition: all 0.25s ease;
+}
+
+/* Hamburger Animation */
+
+.menuButtonActive span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menuButtonActive span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButtonActive span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+
+.mobileMenu {
+  display: none;
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  /* Hide Desktop Navigation */
+
+  .nav,
+  .button {
+    display: none;
+  }
+
+  /* Show Hamburger */
+
+  .menuButton {
+    display: flex;
+  }
+
+  /* Mobile Menu */
+
+  .mobileMenu {
+    display: block;
+
+    max-height: 0;
+    overflow: hidden;
+
+    background: #000000;
+    border-top: 1px solid transparent;
+
+    transition:
+      max-height 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .mobileMenuOpen {
+    max-height: 500px;
+    border-top-color: #eeeeee;
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px 20px 20px;
+  }
+
+  .mobileNav a {
+    padding: 14px 0;
+    color: #faf8f8;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .mobileNav a:hover {
+    color: #FF5500;
+  }
+
+  /* Mobile Get Started */
+
+  .mobileNav .mobileButton {
+    margin-top: 15px;
+    padding: 13px 20px;
+
+    background: #FF5500;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    text-align: center;
+  }
+
+  .mobileNav .mobileButton:hover {
+    background: #333333;
+    color: #ffffff;
+  }
+
+  /* Mobile Logo */
+
+  .logo img {
+    width: 130px;
+    height: auto;
+  }
+}
+
+
+.button {
+  padding: 15px 45px;
+  background: #FF5500;
+  color: #ffffff;
+  border-radius: 0px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: #ff8c00;
+}
