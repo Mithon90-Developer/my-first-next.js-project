@@ -5,6 +5,8 @@ import ContactHero from "@/src/components/Contact/ContactHero";
 import ContactInfo from "@/src/components/Contact/ContactInfo";
 import ContactForm from "@/src/components/Contact/ContactForm";
 
+import styles from "./ContactPage.module.css";
+
 type ContactData = {
   heroTitle?: string;
   heroSubtitle?: string;
@@ -25,10 +27,7 @@ type ContactData = {
 };
 
 export default async function ContactPage() {
-
-  const data: ContactData = await client.fetch(
-    contactPageQuery
-  );
+  const data: ContactData = await client.fetch(contactPageQuery);
 
   return (
     <main>
@@ -38,25 +37,8 @@ export default async function ContactPage() {
         subtitle={data?.heroSubtitle}
       />
 
-
-      <section
-        style={{
-          padding: "100px 24px",
-          background: "#ffffff",
-        }}
-      >
-
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "80px",
-            alignItems: "start",
-          }}
-        >
+      <section className={styles.section}>
+        <div className={styles.container}>
 
           <ContactInfo
             title={data?.infoTitle}
@@ -69,14 +51,12 @@ export default async function ContactPage() {
             linkedin={data?.linkedin}
           />
 
-
           <ContactForm
             title={data?.formTitle}
             description={data?.formDescription}
           />
 
         </div>
-
       </section>
 
     </main>
