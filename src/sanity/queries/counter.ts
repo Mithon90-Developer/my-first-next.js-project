@@ -1,3 +1,6 @@
+import { client } from "../lib/client";
+
+
 const counterQuery = `
 {
 
@@ -16,3 +19,8 @@ const counterQuery = `
   }
 }
 `;
+
+
+export async function getCounter() {
+  return client.fetch(counterQuery);
+}

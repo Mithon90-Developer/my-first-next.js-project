@@ -10,6 +10,7 @@ import { processType } from "./process";
 import { galleryType } from "./gallery";
 import { blogType } from "./blog";
 import { serviceType } from "./service";
+import { ctaType } from "./cta";
 import { footerType } from "./footer";
 
 import { contactMessageType } from "./contactMessage";
@@ -31,6 +32,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     galleryType,
     blogType,
     serviceType,
+    ctaType,
     footerType,
 
 
